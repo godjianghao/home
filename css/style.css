@@ -103,11 +103,13 @@ h1 {
 }
 
 .project-icon {
-    width: 24px;
-    height: 24px;
+    width: 32px;
+    height: 32px;
     flex-shrink: 0;
     margin-top: 0.2rem;
     transition: all 0.3s ease;
+    border-radius: 6px;
+    object-fit: cover;
     color: var(--text-color);
 }
 
@@ -134,7 +136,6 @@ h1 {
 
 .project-card:hover .project-icon {
     transform: scale(1.1);
-    color: var(--text-secondary);
 }
 
 .footer {
