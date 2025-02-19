@@ -4,196 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Deer</title>
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦌</text></svg>">
+    <link rel="icon" href="./assets/favicon.svg">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
-    <style>
-        :root {
-            --bg-color: #fff;
-            --text-color: #374151;
-            --text-secondary: #6b7280;
-            --card-bg: #f9fafb;
-            --card-hover: #f3f4f6;
-            --border-color: #e5e7eb;
-        }
-
-        [data-theme="dark"] {
-            --bg-color: #1a1a1a;
-            --text-color: #e5e7eb;
-            --text-secondary: #9ca3af;
-            --card-bg: #262626;
-            --card-hover: #333333;
-            --border-color: #404040;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            line-height: 1.6;
-            padding: 4rem 2rem;
-            margin: 0;
-        }
-
-        .container {
-            max-width: 65ch;
-            margin: 0 auto;
-        }
-
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-            font-weight: 700;
-            letter-spacing: -0.02em;
-            color: var(--text-color);
-        }
-
-        .intro {
-            margin-bottom: 2.5rem;
-            color: var(--text-secondary);
-            font-size: 1.1rem;
-            line-height: 1.8;
-            letter-spacing: 0.02em;
-        }
-
-        .intro p {
-            margin: 0.5rem 0;
-            transition: all 0.3s ease;
-        }
-
-        .intro p:hover {
-            color: var(--text-color);
-            transform: translateX(5px);
-        }
-
-        .links {
-            display: flex;
-            gap: 1rem;
-            margin: 1.5rem 0;
-        }
-
-        .link {
-            color: var(--text-secondary);
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 2.5rem;
-            height: 2.5rem;
-            border-radius: 50%;
-            background: var(--card-bg);
-            transition: all 0.3s ease;
-        }
-
-        .link:hover {
-            transform: translateY(-3px);
-            background: var(--card-hover);
-        }
-
-        .projects {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 1rem;
-            margin-top: 2rem;
-        }
-
-        .project-card {
-            padding: 1rem;
-            border-radius: 8px;
-            background: var(--card-bg);
-            text-decoration: none;
-            color: inherit;
-            transition: all 0.2s ease;
-        }
-
-        .project-card:hover {
-            background: var(--card-hover);
-            transform: translateY(-2px);
-        }
-
-        .project-title {
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-
-        .project-desc {
-            font-size: 0.9rem;
-            color: var(--text-secondary);
-        }
-
-        .footer {
-            margin-top: 4rem;
-            padding-top: 2rem;
-            border-top: 1px solid var(--border-color);
-            text-align: center;
-            color: var(--text-secondary);
-        }
-
-        .theme-toggle {
-            position: fixed;
-            top: 1.5rem;
-            right: 1.5rem;
-            padding: 0.5rem;
-            border-radius: 50%;
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            cursor: pointer;
-            transition: all 0.3s ease;
-            color: var(--text-color);
-            width: 2.8rem;
-            height: 2.8rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 1000;
-        }
-
-        .theme-toggle:hover {
-            background: var(--card-hover);
-            transform: rotate(15deg);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-
-        .theme-toggle i {
-            font-size: 1.4rem;
-            transition: all 0.3s ease;
-        }
-
-        @media (max-width: 600px) {
-            body {
-                padding: 2rem 1rem;
-            }
-        }
-
-        .link.github:hover {
-            background: #333;
-            color: #fff;
-        }
-
-        .link.email:hover {
-            background: #ea4335;
-            color: #fff;
-        }
-
-        .link.zhihu:hover {
-            background: #0084ff;
-            color: #fff;
-        }
-
-        .link.bilibili:hover {
-            background: #fb7299;
-            color: #fff;
-        }
-
-        .link.smzdm:hover {
-            background: #FF6700;
-            color: #fff;
-        }
-
-        .link.blog:hover {
-            background: #2ecc71;
-            color: #fff;
-        }
-    </style>
+    <link href="./css/style.css" rel="stylesheet">
 </head>
 <body>
     <button class="theme-toggle" id="themeToggle">
@@ -201,12 +14,11 @@
     </button>
 
     <div class="container">
-
         <h1>你好，我是鹿</h1>
         <div class="intro">
-            <p>业余摄影师</p>
-            <p>目前待业中</p>
-            <p>喜欢睡觉</p>
+            <p>前端开发人员 / 业余设计师</p>
+            <p>目前在某公司工作</p>
+            <p>喜欢做一些有趣的项目</p>
         </div>
 
         <div class="links">
@@ -228,10 +40,13 @@
             <a href="https://zhiyou.smzdm.com/member/8735360783/" class="link smzdm" target="_blank">
                 <i class="ri-price-tag-3-line"></i>
             </a>
+            <a href="https://qm.qq.com/cgi-bin/qm/qr?k=zTTTlwf4UfHZUQf3mJ5E4lfhEJv7TO6u&jump_from=webapi&authKey=nKkccmKpMCuhJuzNSzcjZyaLr6eIxeqDuCDJL6A3RQfUYEBV3bCE/lW/ABlq8hCq" class="link qq" target="_blank">
+                <i class="ri-qq-fill"></i>
+            </a>
         </div>
 
         <section>
-            <h2>项目作品</h2>
+            <h2></h2>      <!--项目作品，可以修改，请自行修改-->
             <div class="projects">
                 <a href="https://blog.mrdeer.us.kg" class="project-card" target="_blank">
                     <div class="project-title">我的博客</div>
@@ -257,6 +72,14 @@
                     <div class="project-title">SunPanel</div>
                     <div class="project-desc">自用工具网站</div>
                 </a>
+                <a href="https://admin.mrdeer.us.kg" class="project-card admin-card" target="_blank">
+                    <div class="project-title">管理后台</div>
+                    <div class="project-desc">Web端管理系统</div>
+                </a>
+                <a href="https://panel.mrdeer.us.kg" class="project-card admin-card" target="_blank">
+                    <div class="project-title">控制面板</div>
+                    <div class="project-desc">服务器管理面板</div>
+                </a>
             </div>
         </section>
 
@@ -266,47 +89,6 @@
         </footer>
     </div>
 
-    <script>
-        // 更新主题切换函数
-        function toggleTheme(isDark) {
-            document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
-            const icon = document.querySelector('#themeToggle i');
-            // 添加过渡动画
-            icon.style.opacity = '0';
-            icon.style.transform = 'rotate(-180deg) scale(0.5)';
-            
-            setTimeout(() => {
-                icon.className = isDark ? 'ri-moon-line' : 'ri-sun-line';
-                icon.style.opacity = '1';
-                icon.style.transform = 'rotate(0) scale(1)';
-            }, 150);
-
-            // 保存主题偏好到本地存储
-            localStorage.setItem('theme', isDark ? 'dark' : 'light');
-        }
-
-        // 获取保存的主题偏好
-        const savedTheme = localStorage.getItem('theme');
-        const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
-        const currentHour = new Date().getHours();
-        const isDayTime = currentHour >= 6 && currentHour < 18;
-
-        // 初始化主题
-        const initialDark = savedTheme 
-            ? savedTheme === 'dark'
-            : !isDayTime || prefersDarkScheme.matches;
-        toggleTheme(initialDark);
-
-        // 主题切换按钮点击事件
-        document.getElementById('themeToggle').addEventListener('click', () => {
-            const currentTheme = document.documentElement.getAttribute('data-theme');
-            toggleTheme(currentTheme === 'light');
-        });
-
-        // 监听系统主题变化
-        prefersDarkScheme.addEventListener('change', (e) => {
-            toggleTheme(e.matches);
-        });
-    </script>
+    <script src="./js/theme.js"></script>
 </body>
 </html> 

@@ -1,0 +1,190 @@
+:root {
+    --bg-color: #fff;
+    --text-color: #374151;
+    --text-secondary: #6b7280;
+    --card-bg: #f9fafb;
+    --card-hover: #f3f4f6;
+    --border-color: #e5e7eb;
+}
+
+[data-theme="dark"] {
+    --bg-color: #1a1a1a;
+    --text-color: #e5e7eb;
+    --text-secondary: #9ca3af;
+    --card-bg: #262626;
+    --card-hover: #333333;
+    --border-color: #404040;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding: 4rem 2rem;
+    margin: 0;
+}
+
+.container {
+    max-width: 65ch;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--text-color);
+}
+
+.intro {
+    margin-bottom: 2.5rem;
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    letter-spacing: 0.02em;
+}
+
+.intro p {
+    margin: 0.5rem 0;
+    transition: all 0.3s ease;
+}
+
+.intro p:hover {
+    color: var(--text-color);
+    transform: translateX(5px);
+}
+
+.links {
+    display: flex;
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.link {
+    color: var(--text-secondary);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background: var(--card-bg);
+    transition: all 0.3s ease;
+}
+
+.link:hover {
+    transform: translateY(-3px);
+    background: var(--card-hover);
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.project-card {
+    padding: 1rem;
+    border-radius: 8px;
+    background: var(--card-bg);
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.2s ease;
+}
+
+.project-card:hover {
+    background: var(--card-hover);
+    transform: translateY(-2px);
+}
+
+.project-title {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.project-desc {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.footer {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    text-align: center;
+    color: var(--text-secondary);
+}
+
+.theme-toggle {
+    position: fixed;
+    top: 1.5rem;
+    right: 1.5rem;
+    padding: 0.5rem;
+    border-radius: 50%;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: var(--text-color);
+    width: 2.8rem;
+    height: 2.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.theme-toggle:hover {
+    background: var(--card-hover);
+    transform: rotate(15deg);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.theme-toggle i {
+    font-size: 1.4rem;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 2rem 1rem;
+    }
+}
+
+.link.github:hover { background: #333; color: #fff; }
+.link.email:hover { background: #ea4335; color: #fff; }
+.link.zhihu:hover { background: #0084ff; color: #fff; }
+.link.bilibili:hover { background: #fb7299; color: #fff; }
+.link.smzdm:hover { background: #FF6700; color: #fff; }
+.link.blog:hover { background: #2ecc71; color: #fff; }
+.link.qq:hover { 
+    background: #12B7F5; 
+    color: #fff; 
+}
+
+.admin-card {
+    background: linear-gradient(135deg, var(--card-bg), var(--card-hover));
+    border: 1px solid var(--border-color);
+}
+
+.admin-card:hover {
+    background: linear-gradient(135deg, var(--card-hover), var(--card-bg));
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+[data-theme="dark"] .admin-card {
+    border-color: var(--border-color);
+}
+
+.admin-card .project-title {
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.admin-card .project-desc {
+    color: var(--text-secondary);
+} 
