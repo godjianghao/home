@@ -1,19 +1,23 @@
 
 
-# 纯静态导航页，个人主页,简约而不简单
+#  个人主页
 
 ## ✨特色✨
 
-- **使用cloudflare一键部署无需服务器**  
+- **使用[cloudflare](https://dash.cloudflare.com)一键部署无需服务器**  
+
+- **支持自定义域名**  
+
 - **白天/黑夜模式**  
 
 
-- 使用**原生 HTML**，未使用框架或插件。
+- 使用**原生 HTML、CSS、JS**
 
 
 💻 使用
 
 - ✨cloudflare部署✨
+
 - Fork此项目，打开[cloudflare](https://dash.cloudflare.com)  根据提示操作
 
 - ✨目录结构✨
@@ -29,5 +33,12 @@
     └── favicon.svg         # 网站图标
 ```
 
+🧠 技术栈
+
+- HTML
+- CSS
+- JavaScript
 
 
+🙏 鸣谢
+- **[vscode-icons](https://yesicon.app/vscode-icons/)**  图标库。
