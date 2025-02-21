@@ -1,4 +1,4 @@
-/* filepath: /C:/项目/homepage_dev-main/homepage_dev-main/js/lang.js */
+
 document.addEventListener('DOMContentLoaded', async () => {
     const langToggle = document.getElementById('langToggle');
     const html = document.documentElement;

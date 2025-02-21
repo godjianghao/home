@@ -2,13 +2,13 @@
 
 ## ✨ 特色功能
 
-- **零成本部署** - 使用 [Cloudflare Pages](https://dash.cloudflare.com) 一键部署，无需服务器
-- **域名绑定** - 支持自定义域名和 SSL 证书
-- **主题切换** - 自动/手动切换明暗主题
-- **多语言支持** - 中英文切换功能
-- **实时时钟** - 显示当前时间日期
-- **访问统计** - 整合不蒜子统计功能
-- **原生技术** - 使用原生 HTML、CSS、JavaScript
+- 🚀 使用 [Cloudflare Pages](https://dash.cloudflare.com) 一键部署
+- 🌐 支持自定义域名和 SSL 证书
+- 🌓 自动/手动切换明暗主题
+- 🌍 中英文双语支持
+- ⏰ 实时时钟显示
+- 📊 访问统计功能
+- 💪 原生技术栈，零依赖
 
 ## 💻 快速开始
 
@@ -21,7 +21,6 @@
 5. 部署配置：
    - 构建命令：留空
    - 输出目录：留空
-   - 环境变量：无需设置
 6. 点击「保存并部署」
 
 ### 自定义域名设置
@@ -29,7 +28,6 @@
 1. 在项目部署完成后，进入「自定义域」标签
 2. 点击「设置自定义域」
 3. 输入你的域名，按提示完成 DNS 解析设置
-4. 等待 SSL 证书自动颁发（约 5 分钟）
 
 ## 📁 项目结构
 
@@ -37,43 +35,25 @@
 /
 ├── index.html              # 主页面
 ├── css/                    # 样式文件夹
-│   └── style.css          # 主样式文件
-├── js/                    # 脚本文件夹
-│   ├── theme.js          # 主题切换
-│   ├── lang.js           # 语言切换
-│   └── clock.js          # 时钟功能
-└── assets/               # 资源文件夹
-    ├── images/          # 图片资源
-    └── favicon.svg      # 网站图标
-```
-
-## 🛠️ 本地开发
-
-```bash
-# 克隆项目
-git clone https://github.com/your-username/homepage_dev.git
-
-# 使用 VSCode 打开
-code homepage_dev
-
-# 启动本地服务器（使用 Live Server 插件）
-# 1. 安装 Live Server 插件
-# 2. 右键 index.html 选择 "Open with Live Server"
+│   └── style.css           # 主样式文件
+├── js/                     # 脚本文件夹
+│   ├── theme.js            # 主题切换
+│   ├── lang.js             # 语言切换
+│   └── clock.js            # 时钟功能
+└── assets/                 # 资源文件夹
+    ├── images/             # 图片资源
+    └── favicon.svg         # 网站图标
 ```
 
 ## 🔧 自定义配置
 
-### 修改个人信息
+1. 修改个人信息
+   - 编辑 `index.html` 更新个人信息
+   - 替换 `assets/images` 中的图片资源
 
-1. 编辑 `index.html` 更新个人信息
-2. 替换 `assets/images` 中的图片资源
-3. 修改 `css/style.css` 自定义样式
-
-### 添加新功能
-
-1. 在 `js` 文件夹创建新的脚本文件
-2. 在 `index.html` 底部引入新脚本
-3. 在 `css/style.css` 添加相关样式
+2. 添加新功能
+   - 在 `js` 文件夹创建新的脚本文件
+   - 在 `index.html` 底部引入新脚本
 
 ## 🧠 技术栈
 
@@ -83,7 +63,7 @@ code homepage_dev
 
 ## 📝 更新日志
 
-- 2024.02
+- 2025.02.21
   - 添加实时时钟显示
   - 优化移动端适配
   - 添加访问统计功能
@@ -96,4 +76,4 @@ code homepage_dev
 
 ## 📄 许可证
 
-MIT License © 2024 Deer
+MIT License © 2025 Deer

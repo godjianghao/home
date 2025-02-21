@@ -1,4 +1,4 @@
-/* filepath: /C:/项目/homepage_dev-main/homepage_dev-main/js/clock.js */
+
 function updateClock() {
     const now = new Date();
     
