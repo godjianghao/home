@@ -1,44 +1,99 @@
+# 个人主页
 
+## ✨ 特色功能
 
-#  个人主页
+- **零成本部署** - 使用 [Cloudflare Pages](https://dash.cloudflare.com) 一键部署，无需服务器
+- **域名绑定** - 支持自定义域名和 SSL 证书
+- **主题切换** - 自动/手动切换明暗主题
+- **多语言支持** - 中英文切换功能
+- **实时时钟** - 显示当前时间日期
+- **访问统计** - 整合不蒜子统计功能
+- **原生技术** - 使用原生 HTML、CSS、JavaScript
 
-## ✨特色✨
+## 💻 快速开始
 
-- **使用[cloudflare](https://dash.cloudflare.com)一键部署无需服务器**  
+### Cloudflare Pages 部署
 
-- **支持自定义域名**  
+1. Fork 此项目到你的 GitHub 账号
+2. 登录 [Cloudflare Dashboard](https://dash.cloudflare.com)
+3. 进入 Pages 页面，点击「创建项目」
+4. 选择「从 Git 连接」，授权并选择你 fork 的仓库
+5. 部署配置：
+   - 构建命令：留空
+   - 输出目录：留空
+   - 环境变量：无需设置
+6. 点击「保存并部署」
 
-- **白天/黑夜模式**  
+### 自定义域名设置
 
+1. 在项目部署完成后，进入「自定义域」标签
+2. 点击「设置自定义域」
+3. 输入你的域名，按提示完成 DNS 解析设置
+4. 等待 SSL 证书自动颁发（约 5 分钟）
 
-- 使用**原生 HTML、CSS、JS**
+## 📁 项目结构
 
-
-💻 使用
-
-- ✨cloudflare部署✨
-
-- Fork此项目，打开[cloudflare](https://dash.cloudflare.com)  根据提示操作
-
-- ✨目录结构✨
-
-```markdown
+```
 /
-├── index.html              # 主 HTML 文件，导航页的结构和内容
+├── index.html              # 主页面
 ├── css/                    # 样式文件夹
-│   └── style.css           # 样式文件，控制页面样式
-├── js/                     # 脚本文件夹
-│   └── theme.js            # 主题脚本，控制页面主题
-└── assets/                 # 资源文件夹
-    └── favicon.svg         # 网站图标
+│   └── style.css          # 主样式文件
+├── js/                    # 脚本文件夹
+│   ├── theme.js          # 主题切换
+│   ├── lang.js           # 语言切换
+│   └── clock.js          # 时钟功能
+└── assets/               # 资源文件夹
+    ├── images/          # 图片资源
+    └── favicon.svg      # 网站图标
 ```
 
-🧠 技术栈
+## 🛠️ 本地开发
 
-- HTML
-- CSS
-- JavaScript
+```bash
+# 克隆项目
+git clone https://github.com/your-username/homepage_dev.git
 
+# 使用 VSCode 打开
+code homepage_dev
 
-🙏 鸣谢
-- **[vscode-icons](https://yesicon.app/vscode-icons/)**  图标库。
+# 启动本地服务器（使用 Live Server 插件）
+# 1. 安装 Live Server 插件
+# 2. 右键 index.html 选择 "Open with Live Server"
+```
+
+## 🔧 自定义配置
+
+### 修改个人信息
+
+1. 编辑 `index.html` 更新个人信息
+2. 替换 `assets/images` 中的图片资源
+3. 修改 `css/style.css` 自定义样式
+
+### 添加新功能
+
+1. 在 `js` 文件夹创建新的脚本文件
+2. 在 `index.html` 底部引入新脚本
+3. 在 `css/style.css` 添加相关样式
+
+## 🧠 技术栈
+
+- HTML5
+- CSS3
+- JavaScript ES6+
+
+## 📝 更新日志
+
+- 2024.02
+  - 添加实时时钟显示
+  - 优化移动端适配
+  - 添加访问统计功能
+
+## 🙏 鸣谢
+
+- [Remix Icon](https://remixicon.com/) - 图标库
+- [不蒜子](https://busuanzi.ibruce.info/) - 访问统计
+- [Cloudflare Pages](https://pages.cloudflare.com/) - 部署平台
+
+## 📄 许可证
+
+MIT License © 2024 Deer
