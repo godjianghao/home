@@ -5,7 +5,9 @@
     --card-bg: rgba(0, 0, 0, 0.03);  /* 浅色主题卡片背景色 */
     --card-hover: #f3f4f6;
     --border-color: #e5e7eb;
-    --hover-bg: rgba(0, 0, 0, 0.03);
+    --hover-bg: rgba(0, 0, 0, 0.05);
+    --hover-bg-color: rgba(0, 0, 0, 0.05);
+    --scrollbar-color: rgba(0, 0, 0, 0.2);
 }
 
 [data-theme="dark"] {
@@ -15,7 +17,9 @@
     --card-bg: rgba(255, 255, 255, 0.03);  /* 暗色主题卡片背景色 */
     --card-hover: #333333;
     --border-color: #404040;
-    --hover-bg: rgba(255, 255, 255, 0.03);
+    --hover-bg: rgba(255, 255, 255, 0.05);
+    --hover-bg-color: rgba(255, 255, 255, 0.05);
+    --scrollbar-color: rgba(255, 255, 255, 0.2);
 }
 
 body {
@@ -374,5 +378,82 @@ a {
 @media (max-width: 600px) {
     .clock-container {
         display: none;  /* 在移动端隐藏时钟 */
+    }
+}
+
+/* 首先添加触发区域 */
+.nav-trigger {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 10px;
+    height: 100vh;
+    z-index: 999;
+}
+
+.side-nav {
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--bg-color);
+    padding: 8px 5px;
+    border-radius: 0 12px 12px 0;
+    box-shadow: 2px 0 15px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-item {
+    margin: 6px 0;
+}
+
+.nav-item a {
+    display: flex;
+    align-items: center;
+    padding: 6px;
+    transition: transform 0.2s ease;
+    border-radius: 6px;
+}
+
+.nav-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+.nav-item a:hover {
+    transform: scale(1.1);
+    background: var(--hover-bg, rgba(0, 0, 0, 0.05));
+}
+
+/* 移动端隐藏 */
+@media (max-width: 768px) {
+    .side-nav {
+        display: none;
+    }
+}
+
+/* 自定义滚动条 */
+.side-nav::-webkit-scrollbar {
+    width: 4px;
+}
+
+.side-nav::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-color, rgba(0, 0, 0, 0.2));
+    border-radius: 2px;
+}
+
+/* 暗色模式适配 */
+@media (prefers-color-scheme: dark) {
+    .side-nav::-webkit-scrollbar-thumb {
+        background: var(--scrollbar-color, rgba(255, 255, 255, 0.2));
     }
 }
