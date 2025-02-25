@@ -8,6 +8,9 @@
     --hover-bg: rgba(0, 0, 0, 0.05);
     --hover-bg-color: rgba(0, 0, 0, 0.05);
     --scrollbar-color: rgba(0, 0, 0, 0.2);
+    /* 加深亮色模式下的文字颜色 */
+    --text-primary: rgba(0, 0, 0, 0.95);
+    --text-secondary: rgba(0, 0, 0, 0.85);
 }
 
 [data-theme="dark"] {
@@ -20,6 +23,8 @@
     --hover-bg: rgba(255, 255, 255, 0.05);
     --hover-bg-color: rgba(255, 255, 255, 0.05);
     --scrollbar-color: rgba(255, 255, 255, 0.2);
+    --text-primary: rgba(255, 255, 255, 0.85);
+    --text-secondary: rgba(255, 255, 255, 0.65);
 }
 
 body {
@@ -55,6 +60,8 @@ h1 {
 .intro p {
     margin: 0.5rem 0;
     transition: all 0.3s ease;
+    color: var(--text-secondary);
+    font-weight: 500;
 }
 
 .intro p:hover {
@@ -110,26 +117,41 @@ h1 {
     margin-top: 2rem;
 }
 
+/* 项目卡片基础样式 */
 .project-card {
-    padding: 1rem;
-    border-radius: 6px;
-    background: var(--card-bg);    /* 始终显示背景色 */
-    transition: all 0.2s ease;
-    display: block;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 12px;
+    padding: 15px;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.1);  /* 降低白色背景透明度 */
 }
 
+/* 项目卡片悬停效果 */
 .project-card:hover {
-    transform: translateY(-2px);   /* 只保留上移效果 */
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.15);  /* 悬停时稍微增加透明度 */
+}
+
+/* 深色模式适配 */
+[data-theme="dark"] .project-card {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="dark"] .project-card:hover {
+    background: rgba(0, 0, 0, 0.25);
 }
 
 /* 暗色主题适配 */
 [data-theme="dark"] .project-card {
-    background: var(--bg-color);
+    background: rgba(0, 0, 0, 0.2);
+    box-shadow: none;
 }
 
 [data-theme="dark"] .project-card:hover {
-    background: var(--hover-bg);
-    box-shadow: 0 2px 8px rgba(255, 255, 255, 0.04);
+    transform: translateY(-5px);
+    background: rgba(0, 0, 0, 0.25);
+    box-shadow: none;
 }
 
 .project-header {
@@ -162,6 +184,7 @@ h1 {
     font-weight: 500;
     margin-bottom: 0.2rem;
     line-height: 1.2;
+    color: var(--text-primary);
 }
 
 .project-desc {
@@ -331,8 +354,8 @@ a {
 .clock {
     font-family: 'JetBrains Mono', monospace;
     font-size: 1rem;
-    font-weight: 500;
-    color: var(--text-color);
+    font-weight: 600;
+    color: var(--text-primary);
     letter-spacing: 0.5px;
     opacity: 0.8;
     margin-bottom: 0.2rem;
@@ -342,6 +365,7 @@ a {
     font-size: 0.85rem;
     color: var(--text-secondary);
     opacity: 0.7;
+    font-weight: 500;
 }
 
 /* 暗色主题适配 */
@@ -396,13 +420,13 @@ a {
     left: 0;
     top: 50%;
     transform: translateY(-50%);
-    background: var(--bg-color);
-    padding: 8px 5px;
+    padding: 10px 8px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
     border-radius: 0 12px 12px 0;
-    box-shadow: 2px 0 15px rgba(0, 0, 0, 0.1);
     z-index: 1000;
-    max-height: 90vh;
-    overflow-y: auto;
+    /* 移除 box-shadow */
 }
 
 .nav-list {
@@ -456,4 +480,16 @@ a {
     .side-nav::-webkit-scrollbar-thumb {
         background: var(--scrollbar-color, rgba(255, 255, 255, 0.2));
     }
+}
+
+/* 主要文字样式 */
+h1, h2 {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+/* 项目卡片文字 */
+.project-title {
+    color: var(--text-primary);
+    font-weight: 500;
 }
