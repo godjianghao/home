@@ -1,41 +1,34 @@
 // 更新主题切换函数
 function toggleTheme(isDark) {
     document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
-    const icon = document.querySelector('#themeToggle i');
-    // 添加过渡动画
-    icon.style.opacity = '0';
-    icon.style.transform = 'rotate(-180deg) scale(0.5)';
-    
-    setTimeout(() => {
-        icon.className = isDark ? 'ri-moon-line' : 'ri-sun-line';
-        icon.style.opacity = '1';
-        icon.style.transform = 'rotate(0) scale(1)';
-    }, 150);
-
     // 保存主题偏好到本地存储
     localStorage.setItem('theme', isDark ? 'dark' : 'light');
 }
 
-// 获取保存的主题偏好
-const savedTheme = localStorage.getItem('theme');
-const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
-const currentHour = new Date().getHours();
+// 获取东八区（北京时间）的当前小时
+function getBeijingHour() {
+    // 创建当前UTC时间的Date对象
+    const now = new Date();
+    // 获取UTC时间的小时
+    const utcHour = now.getUTCHours();
+    // 东八区比UTC快8小时
+    const beijingHour = (utcHour + 8) % 24;
+    return beijingHour;
+}
+
+// 获取东八区当前小时
+const currentHour = getBeijingHour();
+// 判断是否是白天（6:00-18:00）
 const isDayTime = currentHour >= 6 && currentHour < 18;
 
-// 初始化主题
-const initialDark = savedTheme 
-    ? savedTheme === 'dark'
-    : !isDayTime || prefersDarkScheme.matches;
+// 初始化主题（白天使用亮色主题，晚上使用暗色主题）
+const initialDark = !isDayTime;
 toggleTheme(initialDark);
 
-// 主题切换按钮点击事件
-document.getElementById('themeToggle').addEventListener('click', () => {
-    const currentTheme = document.documentElement.getAttribute('data-theme');
-    toggleTheme(currentTheme === 'light');
-});
-
-// 监听系统主题变化
-prefersDarkScheme.addEventListener('change', (e) => {
-    toggleTheme(e.matches);
-});
+// 每小时检查一次时间并更新主题
+setInterval(() => {
+    const hour = getBeijingHour();
+    const isDayTime = hour >= 6 && hour < 18;
+    toggleTheme(!isDayTime);
+}, 3600000); // 每小时检查一次（3600000毫秒 = 1小时）
 

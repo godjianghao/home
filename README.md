@@ -4,10 +4,7 @@
 
 - 🚀 使用 [Cloudflare Pages](https://dash.cloudflare.com) 一键部署
 - 🌐 支持自定义域名和 SSL 证书
-- 🌓 自动/手动切换明暗主题
-- 🌍 中英文双语支持
-- ⏰ 实时时钟显示
-- 📊 访问统计功能
+- 🌓 基于东八区时间自动切换明暗主题
 - 💪 原生技术栈，零依赖
 
 ## 💻 快速开始
@@ -35,13 +32,13 @@
 /
 ├── index.html              # 主页面
 ├── css/                    # 样式文件夹
-│   └── style.css           # 主样式文件
+│   ├── style.css           # 主样式文件
+│   └── background.css      # 背景样式文件
 ├── js/                     # 脚本文件夹
-│   ├── theme.js            # 主题切换
-│   ├── lang.js             # 语言切换
-│   └── clock.js            # 时钟功能
+│   └── theme.js            # 主题切换
 └── assets/                 # 资源文件夹
     ├── images/             # 图片资源
+    ├── icons/              # 图标资源
     └── favicon.svg         # 网站图标
 ```
 
@@ -61,36 +58,9 @@
 - CSS3
 - JavaScript ES6+
 
-## 📝 更新日志
-
-### v1.2.1 (2025.02.25)
-- ✨ 新增功能
-  - 添加自定义更换背景
-
-### v1.2.0 (2025.02.24)
-- ✨ 新增功能
-  - 添加左侧快捷导航栏
-  - 优化图标显示效果
-  - 增强深色模式适配
-
-### v1.1.0 (2025.02.21)
-- 🎯 功能优化
-  - 添加实时时钟显示
-  - 优化移动端适配
-  - 添加访问统计功能
-  - 改进主题切换动画
-
-### v1.0.0 (2025.02.20)
-- 🚀 首次发布
-  - 支持 Cloudflare Pages 部署
-  - 中英文双语支持
-  - 深色/浅色主题切换
-  - 响应式设计适配
-
 ## 🙏 鸣谢
 
 - [Remix Icon](https://remixicon.com/) - 图标库
-- [不蒜子](https://busuanzi.ibruce.info/) - 访问统计
 - [Cloudflare Pages](https://pages.cloudflare.com/) - 部署平台
 - [Hippopx](https://www.hippopx.com/) - 背景图片网站
 

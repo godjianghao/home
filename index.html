@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -46,7 +46,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a href="https://spaceship.com" target="_blank">
+                <a href="https://app.spaceship.com" target="_blank">
                     <img src="./assets/images/spaceship.png" alt="Spaceship" class="nav-icon">
                 </a>
             </li>
@@ -82,35 +82,14 @@
             </li>
         </ul>
     </nav>
-    <button class="theme-toggle" id="themeToggle">
-        <i class="ri-sun-line"></i>
-    </button>
-    <button class="lang-toggle" id="langToggle">
-        <i class="ri-translate-2"></i>
-    </button>
-    <div class="clock-container">
-        <div id="clock" class="clock"></div>
-        <div id="date" class="date"></div>
-    </div>
+    <!-- 主题自动切换，基于东八区时间 -->
 
     <div class="container">
-        <h1>
-            <span data-lang="zh">你好，我是鹿</span>
-            <span data-lang="en">Hi, I'm Deer</span>
-        </h1>
+        <h1>你好，我是鹿</h1>
         <div class="intro">
-            <p>
-                <span data-lang="zh">业余摄影</span>
-                <span data-lang="en">Amateur Photographer</span>
-            </p>
-            <p>
-                <span data-lang="zh">目前待业</span>
-                <span data-lang="en">Currently Job Hunting</span>
-            </p>
-            <p>
-                <span data-lang="zh">喜欢睡觉</span>
-                <span data-lang="en">Love Sleeping</span>
-            </p>
+            <p>业余摄影</p>
+            <p>目前待业</p>
+            <p>喜欢睡觉</p>
         </div>
 
         <div class="links">
@@ -219,26 +198,10 @@
         <footer class="footer">
             <div class="footer-content">
                 <div class="copyright">Deer © 2025</div>
-                <div class="visitor-stats">
-                    <div class="stat-item">
-                        <span id="busuanzi_value_site_pv" class="stat-number">0</span>
-                        <span data-lang="zh" class="stat-label">访问量</span>
-                        <span data-lang="en" class="stat-label">Visits</span>
-                    </div>
-                    <div class="stat-item">
-                        <span id="busuanzi_value_site_uv" class="stat-number">0</span>
-                        <span data-lang="zh" class="stat-label">访客数</span>
-                        <span data-lang="en" class="stat-label">Visitors</span>
-                    </div>
-                </div>
             </div>
         </footer>
     </div>
 
-    <!-- 在其他脚本之前添加不蒜子统计脚本 -->
-    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
     <script src="./js/theme.js"></script>
-    <script src="./js/lang.js"></script>
-    <script src="./js/clock.js"></script>
 </body>
 </html>
