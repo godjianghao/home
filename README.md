@@ -61,6 +61,7 @@
 ## 🙏 鸣谢
 
 - [Remix Icon](https://remixicon.com/) - 图标库
+- [faviconextractor](https://www.faviconextractor.com/) - 图标库
 - [Cloudflare Pages](https://pages.cloudflare.com/) - 部署平台
 - [Hippopx](https://www.hippopx.com/) - 背景图片网站
 
