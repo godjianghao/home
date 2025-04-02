@@ -10,6 +10,9 @@
     <link href="./css/background.css" rel="stylesheet">
 </head>
 <body>
+    <div id="fps" style="position: fixed; top: 10px; right: 10px; color: white; padding: 5px 10px; border-radius: 4px; font-size: 14px; z-index: 9999;">
+        FPS: 60
+    </div>
     <div class="nav-trigger"></div>
     
     <nav class="side-nav">
@@ -86,9 +89,7 @@
     <div class="container">
         <h1>Hi 👋, I'm Deer</h1>
         <div class="intro">
-            <p>👦 Welcome to my homepage </p>
-            <p>💻 I'm passionate about web development</p>
-            <p>🚀 I love exploring new technologies</p>
+            <p id="hitokoto">正在加载一言...</p>
         </div>
 
         <div class="links">
@@ -263,6 +264,10 @@
             </div>
         </section>
 
+        <div class="ip-info" style="text-align: left; margin: 20px 0;">
+            <p id="ipInfo">正在获取IP信息...</p>
+        </div>
+
         <footer class="footer">
             <div class="footer-content">
                 <div class="copyright">
@@ -277,5 +282,7 @@
     </div>
 
     <script src="./js/theme.js"></script>
+    <script src="./js/api.js"></script>
+    <script src="./js/fps.js"></script>
 </body>
 </html>

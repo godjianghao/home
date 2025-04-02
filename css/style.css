@@ -445,3 +445,10 @@ h1, h2 {
     color: var(--text-primary);
     font-weight: 500;
 }
+
+/* FPS 计数器的响应式样式 */
+@media screen and (max-width: 768px) {
+    #fps {
+        display: none !important;
+    }
+}
